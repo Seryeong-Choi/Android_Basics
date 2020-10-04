@@ -13,7 +13,7 @@ class Intent1 : AppCompatActivity() {
         setContentView(R.layout.activity_intent)
 
         changeactivity.setOnClickListener {
-//            val intent = Intent(this@Intent1, Intent2::class.java) //앞에는 this나 this@Intent1 둘다 되지만 this@Intent1로 꼭 쓰기 안그러면 크래시될때있음 class.java꼭 써야됨
+//            val intent = Notetaking(this@Intent1, Intent2::class.java) //앞에는 this나 this@Intent1 둘다 되지만 this@Intent1로 꼭 쓰기 안그러면 크래시될때있음 class.java꼭 써야됨
 //            //key value 방식(딕셔너리)
 //            intent.putExtra("number1",1)
 //            intent.putExtra("number2",2)
@@ -29,7 +29,7 @@ class Intent1 : AppCompatActivity() {
             //startActivity(intent2)//보내기만함
             startActivityForResult(intent2, 200)//결과받음
 
-//            val intent = Intent(Intent.ACTION_VIEW, Uri.parse("http://m.naver.com"))
+//            val intent = Notetaking(Notetaking.ACTION_VIEW, Uri.parse("http://m.naver.com"))
 //            startActivity(intent)
         }
     }
