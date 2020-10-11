@@ -34,7 +34,7 @@
 - IntentFlag : FLAG_ACTIVITY_NEW_TASK, FLAG_ACTIVITY_SINGLE_TOP, FLAG_ACTIVITY_CLEAR_TOP 등등
 - 궁금하면 구글 디벨로퍼에서 작업 및 백 스택 문서 확인하기
 
-#Fragment
+#Fragment // 5-23 설명 복습
 - Activity : 앱에 보이는 한 화면의 단위이지만 정확한 설명은 아니다
 - 액티비티가 길어지면 관리 포인트가 많아진다 -> 관리가 어렵다
 - 안드로이드는 디바이스가 너무 다양하다 -> 태블릿에서는 UI 완전 다르게 만들어야됨
@@ -42,3 +42,12 @@
 
 - fragment에도 라이프사이클이 존재하며 액티비티 종속적이다 -> fragment의 라이프사이클도 관리해야하는 문제점이 발생함
 - 쓸지 말지는 선택 가능하지만 쓰는게 유지보수 편하다(개인차 있음)
+- XML에 ViewComponent로 추가하거나 코드로(동적)추가한다
+- 데이터 전달 방법
+    - Activity -> Fragment : argument와 bundle
+    - Fragment -> Activity : 자체 구현(Listener 구현) 5-24강
+
+#Null Safety
+- ? 와 !!
+- button?.setOnClickListener : null이 아니면 실행하겠다
+- button!!.setOnClickListener : null이 아님을 개발자가 보장하는것이므로 정말 확실할때만 써야함
