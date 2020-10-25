@@ -51,3 +51,47 @@
 - ? 와 !!
 - button?.setOnClickListener : null이 아니면 실행하겠다
 - button!!.setOnClickListener : null이 아님을 개발자가 보장하는것이므로 정말 확실할때만 써야함
+
+#lateinit
+- 나중에 초기값 세팅
+- 초기값이 세팅되지 않았을 때 호출하면 에러발생함
+- lateinit 사용할거면 사용 직전에 초기화 필요
+- 사용 비추천한다
+
+#res-values의 파일 적극활용
+
+#Context
+- 중요하다
+- ActivityManagerService(개발 편하도록 미리 구현해둔 기능)에 접근하도록 해주는 역할
+- 또는 주변정보
+- 많은 부분이 이미 만들어져 있다 -> 이것들을 사용하기 위해서는 Context가 필요한 경우가 많다
+- 종류 : activity의 context / application의 context
+- application은 activity를 포함한다 (앱 전체의 정보)
+
+#Thread
+- 작업 흐름
+- 안드로이드 Main Thread : UI Thread라고도 한다 -> 사용자의 input을 받는 thread이므로 절대 정지시킬 수 없음!!
+- UI 관련된 것은 메인thread만 바꿀 수 있음
+- thread 쓸 일은 거의없다, 관리가 매우 어렵다
+
+#Framework
+- 안드로이드스튜디오 등등
+- 개발 하기 위해 지키는 틀
+
+#Library
+- 개발에 필요한 도구가 미리 구현되어 있는 것
+- 함수나 클래스로 구현되어잇음
+- 프레임워크에 없는 기능을 제공하거나 프레임워크에서 하기 힘든 것을 쉽게 할 수 있게 함
+
+- build.gradle에 내용 추가하고 sync 하면 설치됨
+
+#Listview
+- 유사하게 반복되는 뷰를 그리기 위한 도구
+- 그리는 방법 : addView, Listview, RecycleView
+- addView : 실제로 리스트뷰를 그리기 위해 잘 사용되지 않는다, 스크롤이 자동으로 만들어지지 않아 ScrollView 넣어야 함
+    - item을 담을 xmㅣ을 만든다
+    - xml에 내용을 채운다
+    - container view에 더한다
+    - 이걸 반복한다
+- listView : 예전에 ㅁㄶ이 사용
+- RecycleView : 최근에 가장 많이 쓰고 효율 높다
