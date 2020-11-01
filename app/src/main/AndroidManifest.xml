@@ -11,15 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PhoneBookDetailActivity"></activity>
-        <activity android:name=".PhoneBookActivity">
+        <activity android:name=".ListviewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Android.AddviewActivity" />
+        <activity android:name=".PhoneBookDetailActivity" />
+        <activity android:name=".PhoneBookActivity">
+
+        </activity>
+        <activity android:name=".AddviewActivity" />
         <activity android:name=".LibraryActivity" />
         <activity android:name=".Thread" />
         <activity android:name=".Resource" />

@@ -88,10 +88,18 @@
 #Listview
 - 유사하게 반복되는 뷰를 그리기 위한 도구
 - 그리는 방법 : addView, Listview, RecycleView
-- addView : 실제로 리스트뷰를 그리기 위해 잘 사용되지 않는다, 스크롤이 자동으로 만들어지지 않아 ScrollView 넣어야 함
+- addView : 실제로 리스트뷰를 그리기 위해 잘 사용되지 않는다, 스크롤이 자동으로 만들어지지 않아 ScrollView 넣어야 함 -> 거의 안 씀
     - item을 담을 xmㅣ을 만든다
     - xml에 내용을 채운다
     - container view에 더한다
     - 이걸 반복한다
-- listView : 예전에 ㅁㄶ이 사용
-- RecycleView : 최근에 가장 많이 쓰고 효율 높다
+- listView : 예전에 많이 사용 -> 아이템 개수 많을때 쓴다
+    - 리스트로 만들고 싶은 아이템의 리스트 준비
+    - Adapter를 이용한다
+- addView와 Listview의 차이 : 만드는 방식, 그리는 방식이 다르다
+    - addView : 리스트 개수와 상관없이 한번에 다 그린다
+    - ListView : 보이는부분 + 알파만 한번에 그리고 필요한 경우 더 그린다
+- RecyclerView : 최근에 가장 많이 쓰고 효율 높다 -> 얘를 항상 쓰면 된다
+    - 장점 : 
+        - ListView의 개선판으로 ViewHolder를 포함한다
+        - 유연하다 -> LayoutManager(Linear / Grid / StaggeredGrid)
