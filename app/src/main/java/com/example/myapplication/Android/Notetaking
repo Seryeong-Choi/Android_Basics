@@ -100,6 +100,15 @@
     - addView : 리스트 개수와 상관없이 한번에 다 그린다
     - ListView : 보이는부분 + 알파만 한번에 그리고 필요한 경우 더 그린다
 - RecyclerView : 최근에 가장 많이 쓰고 효율 높다 -> 얘를 항상 쓰면 된다
-    - 장점 : 
+    - 장점 :
         - ListView의 개선판으로 ViewHolder를 포함한다
         - 유연하다 -> LayoutManager(Linear / Grid / StaggeredGrid)
+
+#tablayout
+- 텝을 담당
+
+#Pager
+- 화면을 종이 넘기듯 넘기는 역할
+
+#Adapter
+- Tablayout과 Pager를 연결하기 위해서 어댑터 필요함
