@@ -112,3 +112,14 @@
 
 #Adapter
 - Tablayout과 Pager를 연결하기 위해서 어댑터 필요함
+
+#안드로이드DB
+- SQLite
+- SharePreference -> 공유된 사용자의 기호를 저장하기 위한 DB, Key-Value 방식
+    - 얘로 하드한 DB 구축불가(하면 안 됨)
+            //Mode
+            //-MODE_PRIVATE : 생성한 앱에서만 사용 가능
+            //-MODE_WORLD_READABLE : 다른 앱에서 사용 가능 -> 읽기만 가능
+            //-MODE_WORLD_WRITEABLE : 다른 앱에서 사용 가능 -> 기록도 가능
+            //-MODE_MULTI_PROCESS : 이미 호출되어 사용중인지 체크
+            //-MODE_APPEND : 기존 PREFERENCE에 신규로 추가
