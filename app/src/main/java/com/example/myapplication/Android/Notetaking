@@ -123,3 +123,12 @@
             //-MODE_WORLD_WRITEABLE : 다른 앱에서 사용 가능 -> 기록도 가능
             //-MODE_MULTI_PROCESS : 이미 호출되어 사용중인지 체크
             //-MODE_APPEND : 기존 PREFERENCE에 신규로 추가
+
+#Async
+- AsyncTask 상속받음
+    -> onPreExcute : thread 출발 전에 할 작업
+    -> doIntBackground : thread가 할 작업
+    -> onPregressUpdate : 중간중간 main thread로 온다
+    -> onPostExecute : 작업을 다 마치고 main thread로 복귀
+- 장점 : main thread를 기다리게 할 필요 없음, 네트워크 작업
+- 단점 : 재사용 불가능, 구현된 activity가 종료될 때 함께 종료되지 않음, asynctask는 하나만 실행가능(병렬처리 불가)
